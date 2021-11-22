@@ -20,6 +20,21 @@ body{
     background-color: white;
 }
 
+@keyframes RotatingProfilePhoto {
+    0% {                                   /* instead of from and to we can write 0 and 100 percent*/
+        transform: rotate(0deg)
+    }
+
+    50%{                                   /* when reaching 50% of the animation, do this*/
+        transform: rotate(-180deg);
+    }
+
+    100% {
+        transform: rotate(360deg)
+    }
+}
+
+
 #Photo{
     grid-area: photo;
     height: 50px;
@@ -28,6 +43,9 @@ body{
     margin: 20px;
     background-color:transparent;
     border: 2px solid transparent;
+    animation-name: RotatingProfilePhoto;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
 }
 #Education{
     grid-area: education;
